@@ -1,0 +1,11 @@
+        +-----------------+        +----------------------+
+        |     Vehicles    |        |  Rental_Agreements   |
+        +-----------------+        +----------------------+
+        | vehicle_id (PK) |<-------| agreement_id (PK, FK)|
+        | make            |        | vehicle_id (FK, UQ)  |
+        | model           |        | start_date           |
+        | year            |        | end_date             |
+        | color           |        | rental_rate          |
+        | mileage         |        +----------------------+
+        | registration_number|
+        +-----------------+

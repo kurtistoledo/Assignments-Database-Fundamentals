@@ -1,0 +1,44 @@
+          +-----------------+        +-----------------+
+          |     Books       |        |     Authors     |
+          +-----------------+        +-----------------+
+          | book_id (PK)    |        | author_id (PK)  |
+    +-----<| title           |<-------| author_name     |
+    |     | isbn            |        | nationality     |
+    |     | genre           |        | birth_year      |
+    |     | price           |        | death_year      |
+    |     | publication_year|        | biography       |
+    |     | author_id (FK)  |        | collaborator_id |<----+
+    |     +-----------------+        +-----------------+     |
+    |                               ------------------------ |  
+    |                                                         
+    |                                                          
+    |                                                          
+    |                                                          
+    |                                                          
+    |                                                          
+    |     +-----------------+                                  
+    |     |    Transactions |                                  
+    |     +-----------------+                                  
+    |     | transaction_id  |                                  
+    +-----| customer_id (FK)|                                  
+          | book_id (FK)    |                                  
+          | transaction_date|                                  
+          | quantity        |                                 
+          | total_price     |                                  
+          +-----------------+                                  
+                |                                              
+                |                                              
+                |                                            
+                |                                             
+                |                                              
+                V                                              
+          +-----------------+                                  
+          |    Customers    |                                 
+          +-----------------+                                  
+          | customer_id (PK)|                                  
+          | first_name      |                                  
+          | last_name       |                                  
+          | email           |                                  
+          | phone           |                                  
+          | address         |                                 
+          +-----------------+                                 
